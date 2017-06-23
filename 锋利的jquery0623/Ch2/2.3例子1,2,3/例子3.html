@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例子3</title>
+	<script>	
+       window.onload=function(){
+       var bin = document.getElementById('btn');
+       btn.onclick=function(){
+       	var arrays=new Array();
+       	var items = document.getElementsByTagName("check");
+       	for (var i = 0; i < items.length; i++) {
+       		if(items[i].checked){
+       			arrays.push(items[i].value);
+       		}
+       	 } 
+       }
+     }
+	</script>
+	<!--如果用jquery改写上述核心代码的话是：
+        $("#btn").click(function(){
+	    var items = $("input[name='check']:checked");
+	    alert("选中的个数为："+items.leagth);
+        });
+	-->
+</head>
+<body>
+		<input type="checkbox" value="1" name="check" checked="checked"/>
+        <input type="checkbox" value="2" name="check" />
+        <input type="checkbox" value="3" name="check" checked="checked"/>
+		<input type="button"   value="你选中的个数" id="btn"/>			
+</body>
+</html>

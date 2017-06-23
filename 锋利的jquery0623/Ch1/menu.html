@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	
 	<link rel="stylesheet" href="menu.css">
-	<script rel="../jquery-3.2.1/jquery-3.2.1.js"></script>
+	
+	<script src="../jquery-3.2.1/jquery-3.2.1.js"></script>
 	<title>衣物导航栏</title>
 	<script>
 		$(document).ready(function(){
 		   $(".level1>a").click(function(){
-	       $(this).addClass("current").next().show().parent().siblings().children("a").removeClass("current").next().hide();
+	       $(this).addClass("current")
+	       .next().show()
+	       .parent().siblings().children("a").removeClass("current")
+	       .next().hide();
 	       return false;
       });	
 		});

@@ -1,0 +1,108 @@
+
+
+
+/*自主写的css代码 有问题 "显示全部品牌"没有放到大框中
+   没有很好的设计各个品牌之间的距离 
+   以及伪类点其中一个所有的背景色都改变了*/
+
+/*
+div.SubCategoryBox{
+	width:    500px;
+	height:   500px;
+	border:   1px solid #121111;
+	padding:  5px;
+	margin:   10px;
+	color:    #121111;
+}
+
+ul li{
+    width: 100px;
+    height:20px;
+    margin:20px;
+    float:  left;
+    list-style-type: none;
+}
+
+div.showmore a span{
+	width: 100px;
+    height: 50px;
+    border: 1px solid #121111;
+	margin: 10px;
+	padding:5px;
+}
+
+a:link{
+	background-color: #FFFFFF;
+}
+a:visited{
+	background-color: #E4C8C8;
+}
+a:hover{
+    background-color: #EFB60F;
+}
+a:active{
+	background-color: #CDAEAE
+}
+*/
+
+/*消除浏览器之间的差异，用通配选择器将内外边距都设为0*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*设置字体大小 文本位置——水平对齐 text-align*/
+body{
+	font-size: 12px;
+	text-align: center;
+}
+a{
+	color:#04D;
+	text-decoration:none;
+}
+a:hover{
+	color: #F50;
+	text-decoration: underline;
+}
+.SubCategoryBox{
+	width:600px;
+	margin:0 auto;  /*自己写的时候没考虑到的地方-auto*/
+    text-align: center;
+    margin-top: 40px; /*这和前面的 margin：0 auto；不是冲突覆盖了？*/
+}
+.SubCategoryBox ul{
+	list-style: none; /*list-style 包括 list-style-type image position*/
+}
+.SubCategoryBox ul li{
+	display: block; /*ul li 本身就是块级元素 这句话的意义是？*/
+	float:   left;
+	width:   200px;
+	line-height: 20px;       /*行高*/
+}
+.showmore{
+	clear:   both;   /*清除浮动*/
+	text-align: center;
+	padding-top: 10px;
+}
+.showmore a {
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	line-height: 24px;
+	border: 1px solid #AAA;
+}
+.showmore a span{
+	padding-left: 15px;
+    background:url(../img/down.gif) no-repeat 0 50%; 
+    /*背景图片不重复 摆放位置为左中*/
+}
+.promoted a{
+	color: #F50;
+}
+
+
+
+
+
+
+
+
