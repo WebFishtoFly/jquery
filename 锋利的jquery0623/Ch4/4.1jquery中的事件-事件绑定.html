@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4.1.2事件绑定</title>
+    <script src="../jquery-3.2.1/jquery-3.2.1.js"></script>
+	<style>
+		div{
+			font:sans-serif #8F6363;
+		}
+		div h5{
+			padding: 10px;
+			margin:  25px;
+			border:  2px solid #1C1919;
+			background-color: #8B807C;
+			font-weight: bolder;
+			font-size: 20px
+		}
+		.content{
+            display: none;
+		}
+	</style>
+	<script>
+	     //绑定click事件
+		$(document).ready(function(){
+		  $("#panel h5.head").bind("click",function(){
+				 var $content=$(this).next();
+                 if ($content.is(":visible")) {
+                 	 $content.hide();
+                 }else{
+                 	 $content.show();
+                 }
+				 
+			});
+	    
+		//绑定mouseover和mouseout事件
+		   $("#panel h5.head").bind("mouseover",function(){
+		   	   $(this).next().show();
+		   }).bind("mouseout",function(){
+		   	  $(this).next().hide();
+		   })
+		})
+	</script>
+
+</head>
+<body>
+	<div id="panel">
+		<h5 class="head">什么是jquery?</h5>
+		<div class="content">jquery是继prototype之后又一个优秀的JavaScript库，它是一个由John Resig创建于206年1月的开源项目。jquery凭借简介的语法和跨平台的兼容性，极大的简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式</div>
+	</div>
+</body>
+</html>                     
